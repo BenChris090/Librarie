@@ -18,7 +18,7 @@ const Navbar = ({ isLoggedIn }) => {
     return (
         <nav className="bg-indigo-700 px-4 py-4">
           <div className="container mx-auto flex justify-between items-center">
-            <Link to="/" className="text-white text-3xl font-bold flex items-center">
+            <Link to="/" className="text-white text-3xl font-bold flex items-center mr-auto pr-auto">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 3a1 1 0 00-.707.293l-8 8a1 1 0 000 1.414l8 8a1 1 0 001.414-1.414L4.414 12H18a1 1 0 100-2H4.414l6.293-6.293A1 1 0 0010 3z" clipRule="evenodd" />
               </svg>
