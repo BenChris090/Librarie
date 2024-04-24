@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import FootBar from './Footbar';
 import LoadingPage from './Loading';
 
-
 const Book = () => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
@@ -16,8 +15,6 @@ const Book = () => {
     { id: 5, title: 'Colorful Sunset', author: 'Genevieve Sinclair', coverUrl: require('../images/bg5.jpg'), description: 'A colorful sunset over a calm lake with mountains in the background.' },
     { id: 6, title: 'Futuristic Skyline', author: 'Atticus Beaumont', coverUrl: require('../images/bg6.jpg'), description: 'A futuristic city skyline with tall skyscrapers and flying cars.' },
   ];
-
-  
 
   // Find the book details based on the ID
   useEffect(() => {
@@ -34,8 +31,8 @@ const Book = () => {
       <Navbar isLoggedIn={true} />
       <div className="container mx-auto py-20 flex-grow">
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-          <div className="flex items-center mb-8">
-            <img src={book.coverUrl} alt={book.title} className="w-40 h-auto rounded-md mr-8" />
+          <div className="flex flex-col md:flex-row items-center mb-8">
+            <img src={book.coverUrl} alt={book.title} className="w-full md:w-40 h-auto rounded-md mb-4 md:mr-8" />
             <div>
               <h2 className="text-2xl font-semibold mb-2">{book.title}</h2>
               <p className="text-lg text-gray-600">By {book.author}</p>

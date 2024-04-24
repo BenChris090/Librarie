@@ -29,7 +29,7 @@ const AuthPage = () => {
 
   return (
     <div className="bg-gradient-to-r from-blue-400 to-indigo-600 min-h-screen">
-      <div className="container mx-auto py-20">
+      <div className="container mx-auto py-20 px-4">
         <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
           {isLogin ? (
             <>

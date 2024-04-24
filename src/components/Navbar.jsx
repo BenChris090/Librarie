@@ -43,7 +43,7 @@ const Navbar = ({ isLoggedIn }) => {
               {/* Add more navigation links as needed */}
             </div>
           </div>
-          <div className={`container mx-auto ${isOpen ? 'block' : 'hidden'}`}>
+          <div className={`container mx-auto mt-4 ${isOpen ? 'block' : 'hidden'}`}>
             <ul className="flex flex-col space-y-4 md:hidden">
               <li>
                 <Link to="/" className="text-white hover:text-gray-300">Home</Link>

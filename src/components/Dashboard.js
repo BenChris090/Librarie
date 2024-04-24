@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import FootBar from './Footbar';
 import { FaBook } from "react-icons/fa";
 
-
-let DASH_PIC1 = require('../images/bg1.jpg');
-let DASH_PIC2 = require('../images/bg2.jpg');
-let DASH_PIC3 = require('../images/bg3.jpg');
+// Importing images
+import DASH_PIC1 from '../images/bg1.jpg';
+import DASH_PIC2 from '../images/bg2.jpg';
+import DASH_PIC3 from '../images/bg3.jpg';
 
 const Dashboard = () => {
   const { displayName } = useParams();
@@ -21,24 +21,25 @@ const Dashboard = () => {
 
   // Dummy data for user's books
   const userBooks = [
-    { id: 1, title: 'A serene forest with sunlight filtering through the trees.', author: 'Author 1', coverUrl: DASH_PIC1 },
-    { id: 2, title: 'A majestic mountain peak with clouds swirling around it.', author: 'Author 2', coverUrl: DASH_PIC2 },
-    { id: 3, title: 'A vast desert landscape with sand dunes stretching to the horizon.', author: 'Author 3', coverUrl: DASH_PIC3 },
+    { id: 1, title: 'Serene Sunlight', author: 'Eleanor Gracewood', coverUrl: DASH_PIC1, description: 'A serene forest with sunlight filtering through the trees.' },
+    { id: 2, title: 'Majestic Mountain', author: 'Maximilian Vanderbilt', coverUrl: DASH_PIC2, description: 'A majestic mountain peak with clouds swirling around it.' },
+    { id: 3, title: 'Vast Horizon', author: 'Adelaide Montague', coverUrl: DASH_PIC3, description: 'A vast desert landscape with sand dunes stretching to the horizon.' },
     // Add more dummy data as needed
   ];
 
   return (
-    <div className="bg-gradient-to-r from-blue-400 to-indigo-500 min-h-screen">
+    <div className="bg-gradient-to-r from-blue-400 to-indigo-600 min-h-screen">
       <Navbar isLoggedIn={true} />
       <div className="container mx-auto py-20">
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-semibold mb-6 text-center">Welcome, {displayName}</h2>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {userBooks.map(book => (
               <div key={book.id} className="flex flex-col items-center justify-center">
-                <img src={book.coverUrl} alt={book.title} className="w-32 h-32 object-cover rounded-md mb-2" />
-                <h1 className="text-lg font-bold">{book.title}</h1>
-                <p className="text-sm text-gray-500">{book.author}</p>
+                <img src={book.coverUrl} alt={book.title} className="w-full md:w-64 h-auto object-cover rounded-md mb-2" />
+                <h1 className="text-lg font-bold text-center">{book.title}</h1>
+                <p className="text-sm text-gray-500">{book.author}</p>           
+                <p className="text-lg text-gray-700 mb-4">{book.description}</p>
               </div>
             ))}
           </div>

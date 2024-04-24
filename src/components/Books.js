@@ -20,7 +20,7 @@ const Books = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar isLoggedIn={true} />
       <div className="container mx-auto py-20 flex-grow">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
           {books.map(book => (
             <div key={book.id} className="bg-white p-4 rounded-lg shadow-lg">
               <Link to={`/books/${book.id}`}>
