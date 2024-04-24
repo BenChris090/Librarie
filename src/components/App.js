@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Home from './Home';
 import Books from './Books';
 import Book from './Book'
+import About from './About';
 import Dashboard from './Dashboard';
 import AuthPage from './UserAuth';
 import AdminDash from './AdminDash';
@@ -19,8 +20,9 @@ function App() {
             {/* <Route path='/our-work' element={<OurWork/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/get-involved' element={<Get_Involved/>}/> */}
-            <Route path='/books' element={<Dashboard/>}/>
+            <Route path='/books-page' element={<Books/>}/>
             <Route path='/books/:id' element={<Book/>}/>
+            <Route path='/about' element={<About/>}/>
             <Route path='/dashboard/:displayName' element={<Dashboard/>}/>
             <Route path='/user-auth' element={<AuthPage/>}/>
             <Route path='/admin-dash' element={<AdminDash/>}/>

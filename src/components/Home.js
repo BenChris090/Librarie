@@ -34,7 +34,7 @@ const Home = () => {
         <div className="text-center text-white">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to Librarie</h1>
           <p className="text-lg md:text-xl mb-8">Discover your next adventure in our vast collection of books.</p>
-          <Link to="/books" className="bg-white text-indigo-700 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-400 hover:text-white transition duration-300 inline-block">Start Exploring</Link>
+          <Link to="/books-page" className="bg-white text-indigo-700 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-400 hover:text-white transition duration-300 inline-block">Start Exploring</Link>
         </div>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20 px-4">
@@ -44,7 +44,7 @@ const Home = () => {
             <div className="p-6 bg-gray-100 rounded-b-lg">
               <h2 className="text-xl font-semibold mb-2">Book Title</h2>
               <p className="text-gray-700">{description}</p>
-              <Link to="/books" className="block text-center mt-4 text-indigo-700 hover:text-indigo-900 font-semibold">Read More</Link>
+              <Link to="/books-page" className="block text-center mt-4 text-indigo-700 hover:text-indigo-900 font-semibold">Read More</Link>
             </div>
           </div>
         ))}

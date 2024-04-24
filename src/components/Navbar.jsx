@@ -37,7 +37,8 @@ const Navbar = ({ isLoggedIn }) => {
             </button>
             <div className={`hidden md:flex space-x-10 text-xl`}>
               <Link to="/" className="text-white hover:text-gray-300">Home</Link>
-              <Link to="/books" className="text-white hover:text-gray-300">Books</Link>
+              <Link to="/books-page" className="text-white hover:text-gray-300">Books</Link>
+              <Link to="/about" className="text-white hover:text-gray-300">About</Link>
               {isLoggedIn ? null : <Link to="/user-auth" className="text-white hover:text-gray-300">Login</Link>}
               {/* Add more navigation links as needed */}
             </div>
@@ -48,7 +49,10 @@ const Navbar = ({ isLoggedIn }) => {
                 <Link to="/" className="text-white hover:text-gray-300">Home</Link>
               </li>
               <li>
-                <Link to="/books" className="text-white hover:text-gray-300">Books</Link>
+                <Link to="/books-page" className="text-white hover:text-gray-300">Books</Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-white hover:text-gray-300">About</Link>
               </li>
               <li>
                 {isLoggedIn ? null : <Link to="/user-auth" className="text-white hover:text-gray-300">Login</Link>}

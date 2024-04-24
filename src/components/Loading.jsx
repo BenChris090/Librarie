@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import FootBar from './FoobBar';
+import FootBar from './Footbar';
 
 const LoadingPage = () => {
   return (
