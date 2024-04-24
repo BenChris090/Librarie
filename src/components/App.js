@@ -17,9 +17,6 @@ function App() {
         <div className="content">
           <Routes>
             <Route path='/' element={<Home/>}/>
-            {/* <Route path='/our-work' element={<OurWork/>}/>
-            <Route path='/about' element={<About/>}/>
-            <Route path='/get-involved' element={<Get_Involved/>}/> */}
             <Route path='/books-page' element={<Books/>}/>
             <Route path='/books/:id' element={<Book/>}/>
             <Route path='/about' element={<About/>}/>
